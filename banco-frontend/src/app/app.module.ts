@@ -4,12 +4,18 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 
-import { AppComponent } from './app.component'
+import { AppComponent } from './app.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { HomeComponent } from './home/home.component';
+import { SobreComponent } from './sobre/sobre.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CabecalhoComponent,
+    HomeComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
