@@ -1,5 +1,6 @@
 package com.capgemini.banco.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.capgemini.banco.models.Conta;
@@ -22,5 +23,11 @@ public interface ContaService {
      * @return Conta
      */
     Conta persistir(Conta conta);
+
+    /**
+     * Busca todas as contas
+     * @return List<Conta>
+     */
+    List<Conta> buscar();
 
 }

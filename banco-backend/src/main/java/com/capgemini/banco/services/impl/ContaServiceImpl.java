@@ -1,5 +1,6 @@
 package com.capgemini.banco.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.capgemini.banco.models.Conta;
@@ -28,6 +29,12 @@ public class ContaServiceImpl implements ContaService {
     public Conta persistir(Conta conta) {
         
         return this.contaRepository.save(conta);
+    }
+
+    @Override
+    public List<Conta> buscar() {
+        
+        return this.contaRepository.findAll();
     }
 
 }
