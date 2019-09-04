@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import javax.validation.Valid;
-
 import com.capgemini.banco.dtos.ContaDto;
 import com.capgemini.banco.models.Conta;
 import com.capgemini.banco.response.Response;
@@ -85,7 +83,7 @@ public class ContaController {
      */
     @PutMapping(value = "/{id}")
     public ResponseEntity<Response<ContaDto>> atualizar(@PathVariable("id") Long id,
-            @Valid @RequestBody ContaDto contaDto, BindingResult result) {
+            @RequestBody ContaDto contaDto, BindingResult result) {
 
         Response<ContaDto> response = new Response<>();
 

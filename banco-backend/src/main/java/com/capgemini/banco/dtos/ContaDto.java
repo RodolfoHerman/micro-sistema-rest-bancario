@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Optional;
 
-import javax.validation.constraints.NotNull;
 
 /**
  * ContaDto
@@ -15,7 +14,6 @@ public class ContaDto {
 
     private BigDecimal saldo;
 
-    @NotNull(message = "O tipo de operação deve ser informada (Deposito ou Saque)")
     private Optional<Boolean> deposito = Optional.empty();
 
     private Optional<BigDecimal> valor = Optional.empty();
