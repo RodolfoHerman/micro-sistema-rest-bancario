@@ -11,6 +11,7 @@ import { SobreComponent } from './sobre/sobre.component'
 import { ROUTES } from './app.routes';
 import { ContasComponent } from './contas/contas.component';
 import { ContaComponent } from './contas/conta/conta.component';
+import { ContasService } from './contas/contas.service';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { ContaComponent } from './contas/conta/conta.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    ContasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
