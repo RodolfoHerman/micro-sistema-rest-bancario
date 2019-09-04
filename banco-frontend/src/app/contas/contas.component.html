@@ -1,0 +1,17 @@
+<section class="content-header">
+  <h1>
+    Todas as Contas
+  </h1>
+</section>
+
+
+<section class="content">
+
+  <div class="row">
+    <div *ngFor="let conta of contas"  class="col-sm-6 col-xs-12">
+      <bc-conta [conta]="conta"></bc-conta>
+    </div>
+
+  </div>
+
+</section>

@@ -9,6 +9,8 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { SobreComponent } from './sobre/sobre.component'
 import { ROUTES } from './app.routes';
+import { ContasComponent } from './contas/contas.component';
+import { ContaComponent } from './contas/conta/conta.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ROUTES } from './app.routes';
     AppComponent,
     CabecalhoComponent,
     HomeComponent,
-    SobreComponent
+    SobreComponent,
+    ContasComponent,
+    ContaComponent
   ],
   imports: [
     BrowserModule,
