@@ -149,7 +149,7 @@ public class ContaController {
                 contaDto.getValor().ifPresentOrElse(valor -> conta.saque(valor),
                         () -> result.addError(new ObjectError("valor", "Valor de saque deve ser informado")));
 
-                if (conta.getSaldo().doubleValue() < 0) {
+                if (conta.isSaldoNegativo()) {
 
                     result.addError(new ObjectError("valor", "Valor de saque não disponível. Saldo atual R$".concat(contaDto.getSaldo().toString())));
                 }

@@ -109,6 +109,12 @@ public class Conta implements Serializable {
         this.setSaldo(this.saldo.subtract(valor));
     }
 
+    @Transient
+    public boolean isSaldoNegativo() {
+
+        return this.saldo.doubleValue() < 0;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
