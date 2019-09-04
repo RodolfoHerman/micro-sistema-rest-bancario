@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * Conta
@@ -94,6 +95,18 @@ public class Conta implements Serializable {
         final Date atual = new Date();
         this.dataCriacao = atual;
         this.dataAtualizacao = atual;
+    }
+
+    @Transient
+    public void deposito(BigDecimal valor) {
+        
+        this.setSaldo(this.saldo.add(valor));
+    }
+
+    @Transient
+    public void saque(BigDecimal valor) {
+
+        this.setSaldo(this.saldo.subtract(valor));
     }
 
     @Override
