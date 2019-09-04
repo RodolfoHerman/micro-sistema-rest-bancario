@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS conta (
 	saldo DECIMAL(19,2),
 	data_criacao TIMESTAMP,
 	data_atualizacao TIMESTAMP,
+    cpf VARCHAR(255),
 
     PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;

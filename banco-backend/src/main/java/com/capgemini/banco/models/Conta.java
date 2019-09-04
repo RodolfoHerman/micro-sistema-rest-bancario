@@ -36,6 +36,9 @@ public class Conta implements Serializable {
     @Column(name = "data_atualizacao")
     private Date dataAtualizacao;
 
+    @Column(name = "cpf")
+    private String cpf;
+
     public Conta() {}
 
     public Long getId() {
@@ -69,6 +72,14 @@ public class Conta implements Serializable {
 
     public void setDataAtualizacao(Date dataAtualizacao) {
         this.dataAtualizacao = dataAtualizacao;
+    }
+
+    public String getCpf() {
+        return this.cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     @PreUpdate
