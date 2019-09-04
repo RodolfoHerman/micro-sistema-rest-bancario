@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { SobreComponent } from './sobre/sobre.component'
+import { ROUTES } from './app.routes';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { SobreComponent } from './sobre/sobre.component'
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
