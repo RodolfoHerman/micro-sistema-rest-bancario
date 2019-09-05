@@ -1,0 +1,45 @@
+{{ form.valid }}
+{{ form.value | json }}
+
+<form #form="ngForm" novalidate>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="page-header">
+        Realizar Operação Bancária
+      </h2>
+    </div>
+  </div>
+
+  <div class="row invoice-info">
+    <div class="col-sm-12 col-xs-12">
+      <div class="form-group">
+
+        <bc-radio [options]="optionOperacoes"></bc-radio>
+        
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-xs-12">
+      <div class="form-group" [class.has-success]="iptValor.valid && (iptValor.dirty || iptValor.touched)"
+          [class.has-error]="!iptValor.valid && (iptValor.dirty || iptValor.touched)"
+      >
+        <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Valor</label>
+        <input type="number" class="form-control" required name="valor" #iptValor="ngModel" ngModel placeholder="Valor">
+        <span *ngIf="iptValor.valid && (iptValor.dirty || iptValor.touched)" class="help-block"><i class="fa fa-check"></i> Ok</span>
+        <span *ngIf="!iptValor.valid && (iptValor.dirty || iptValor.touched)" class="help-block"><i class="fa fa-remove"></i> Campo obrigatório para realizar operação bancária</span>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="box box-solid">
+        <div class="box-footer">
+          <div class="pull-right">
+            <a [routerLink]="['/contas']" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Voltar</a>
+            <button href="#" [disabled]="!form.valid" class="btn btn-success"><i class="fa fa-credit-card"></i> Realizar operação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>

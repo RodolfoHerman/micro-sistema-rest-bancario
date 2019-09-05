@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
@@ -13,6 +13,8 @@ import { ContasComponent } from './contas/contas.component';
 import { ContaComponent } from './contas/conta/conta.component';
 import { ContasService } from './contas/contas.service';
 import { ContaDetalheComponent } from './conta-detalhe/conta-detalhe.component';
+import { OperacaoComponent } from './conta-detalhe/operacao/operacao.component';
+import { RadioComponent } from './compartilhado/radio/radio.component';
 
 
 @NgModule({
@@ -23,15 +25,19 @@ import { ContaDetalheComponent } from './conta-detalhe/conta-detalhe.component';
     SobreComponent,
     ContasComponent,
     ContaComponent,
-    ContaDetalheComponent
+    ContaDetalheComponent,
+    OperacaoComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    ContasService
+    ContasService,
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
 })
