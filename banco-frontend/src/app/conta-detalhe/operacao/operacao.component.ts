@@ -3,6 +3,7 @@ import { RadioOption } from 'app/compartilhado/radio/radio-option.model';
 import { Conta } from 'app/contas/conta/conta.model';
 import { Formulario } from './formulario.model';
 import { ContasService } from 'app/contas/contas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bc-operacao',
@@ -18,7 +19,10 @@ export class OperacaoComponent implements OnInit {
 
   @Input() conta: Conta;
 
-  constructor(private contaService: ContasService) { }
+  constructor(
+    private contaService: ContasService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -30,7 +34,7 @@ export class OperacaoComponent implements OnInit {
     this.conta.valor    = dados.getValor();
     this.conta.deposito = dados.isDeposito();
 
-    this.contaService.atualizar(this.conta).subscribe(conta => console.log(conta));
+    this.contaService.atualizar(this.conta).subscribe(dado => this.router.navigate(['/contas-sucesso']));
   }
 
 }

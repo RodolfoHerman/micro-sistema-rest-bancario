@@ -15,6 +15,7 @@ import { ContasService } from './contas/contas.service';
 import { ContaDetalheComponent } from './conta-detalhe/conta-detalhe.component';
 import { OperacaoComponent } from './conta-detalhe/operacao/operacao.component';
 import { RadioComponent } from './compartilhado/radio/radio.component';
+import { ContaSucessoComponent } from './conta-sucesso/conta-sucesso.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RadioComponent } from './compartilhado/radio/radio.component';
     ContaComponent,
     ContaDetalheComponent,
     OperacaoComponent,
-    RadioComponent
+    RadioComponent,
+    ContaSucessoComponent
   ],
   imports: [
     BrowserModule,

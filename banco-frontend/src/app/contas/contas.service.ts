@@ -23,10 +23,10 @@ export class ContasService {
             .map(response => response.json().data);
     }
 
-    atualizar(conta: Conta): Observable<Conta> {
+    atualizar(conta: Conta): Observable<any> {
 
         return this.http.put(`${BANCO_API}/contas/${conta.id}`, conta)
-            .map(response => response.json().data);
+            .map(response => response.json());
     }
 
 }
