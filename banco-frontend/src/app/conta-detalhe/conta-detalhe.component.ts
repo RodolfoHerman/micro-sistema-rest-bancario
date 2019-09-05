@@ -18,7 +18,7 @@ export class ContaDetalheComponent implements OnInit {
 
   ngOnInit() {
 
-    this.contasService.contaPorId(this.route.snapshot.params['id']).subscribe(conta => this.conta = conta);
+    this.contasService.contaPorId(this.route.snapshot.params['id']).subscribe(response => this.conta = response.data);
   }
 
   getConta(): Conta {

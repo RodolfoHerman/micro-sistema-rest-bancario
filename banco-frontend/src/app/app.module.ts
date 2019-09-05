@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import locatePt from '@angular/common/locales/pt';
+
+registerLocaleData(locatePt, 'pt');
 
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
@@ -16,6 +19,7 @@ import { ContaDetalheComponent } from './conta-detalhe/conta-detalhe.component';
 import { OperacaoComponent } from './conta-detalhe/operacao/operacao.component';
 import { RadioComponent } from './compartilhado/radio/radio.component';
 import { ContaSucessoComponent } from './conta-sucesso/conta-sucesso.component';
+import { registerLocaleData } from '@angular/common';
 
 
 @NgModule({
@@ -33,13 +37,13 @@ import { ContaSucessoComponent } from './conta-sucesso/conta-sucesso.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
     ContasService,
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]
 })

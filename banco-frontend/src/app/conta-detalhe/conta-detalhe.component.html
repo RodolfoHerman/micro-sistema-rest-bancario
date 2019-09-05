@@ -24,7 +24,7 @@
 
           <dl class="col-sm-9 col-xs-12">
             <dt>Saldo</dt>
-            <dd>{{ conta?.saldo | currency: 'BRL': true }}</dd>
+            <dd>{{ conta?.saldo | currency: 'BRL': 'symbol' }}</dd>
             <dt>Data criação</dt>
             <dd>{{ conta?.dataCriacao | date: 'dd/MM/yyyy -- HH:mm:ss' }}</dd>
             <dt>Data atualização</dt>

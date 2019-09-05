@@ -31,8 +31,8 @@
       <div class="box box-solid">
         <div class="box-footer">
           <div class="pull-right">
-            <a [routerLink]="['/contas']" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Voltar</a>
-            <button (click)="enviarDados(form.value)" href="" [disabled]="!form.valid" class="btn btn-success"><i class="fa fa-credit-card"></i> Realizar operação</button>
+            <a [routerLink]="['/contas']" style="margin-right: 10px" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Voltar</a>
+            <button (click)="enviarDados(form.value)" [disabled]="!form.valid" class="btn btn-success"><i class="fa fa-credit-card"></i> Realizar operação</button>
           </div>
         </div>
       </div>

@@ -14,7 +14,9 @@ export class ContasComponent implements OnInit {
 
   ngOnInit() {
 
-    this.contasService.contas().subscribe(contas => this.contas = contas);
+    this.contasService.contas().subscribe(response => {
+      this.contas = response.data
+    });
   }
 
 }
