@@ -12,6 +12,7 @@ import { ROUTES } from './app.routes';
 import { ContasComponent } from './contas/contas.component';
 import { ContaComponent } from './contas/conta/conta.component';
 import { ContasService } from './contas/contas.service';
+import { ContaDetalheComponent } from './conta-detalhe/conta-detalhe.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ContasService } from './contas/contas.service';
     HomeComponent,
     SobreComponent,
     ContasComponent,
-    ContaComponent
+    ContaComponent,
+    ContaDetalheComponent
   ],
   imports: [
     BrowserModule,

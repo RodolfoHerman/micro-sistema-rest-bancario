@@ -1,10 +1,10 @@
-<a href="#">
+<a [routerLink]="['/contas', conta.id]">
   <div class="place-info-box">
     <span class="place-info-box-icon"><img src="assets/img/dinheiro.png" /></span>
 
     <div class="place-info-box-content">
-      <span class="place-info-box-text">Conta Bancária</span>
-      <span class="place-info-box-star"><i class="fa fa-id-card"></i>  {{ conta.id }}</span>
+      <span class="place-info-box-text">Conta Corrente</span>
+      <span class="place-info-box-star"><i class="fa fa-id-card fa-lg"></i>  {{ conta.id }}</span>
       <span class="place-info-box-detail">Saldo</span>
       <span class="place-info-box-detail">{{ conta.saldo | currency: 'BRL': true }}</span>
     </div>

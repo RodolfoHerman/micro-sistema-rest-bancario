@@ -17,4 +17,10 @@ export class ContasService {
 
     }
 
+    contaPorId(id: string): Observable<Conta> {
+
+        return this.http.get(`${BANCO_API}/contas/${id}`)
+            .map(response => response.json().data);
+    }
+
 }
